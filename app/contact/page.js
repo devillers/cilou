@@ -41,7 +41,7 @@ export default function ContactPage() {
           envoyer
         </button>
       </form>
-      {status && <p className="mt-4 text-sm">{status}</p>}
+      {status && <p className="mt-4 text-sm text-[#009996]">{status}</p>}
     </div>
   );
 }
