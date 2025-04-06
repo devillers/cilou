@@ -45,7 +45,7 @@ export default function MegaMenu() {
 
   return (
     <header className=" shadow-sm relative z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between ">
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
           {/* <div className="text-xl uppercase">Pause  <span className='text-[#bd9254]'>Reflexo</span></div> */}
@@ -75,8 +75,11 @@ export default function MegaMenu() {
         onMouseLeave={handleMouseLeave}
         onMouseEnter={handleMouseEnter}
         className={`transition-all duration-500 ease-in-out ${
-          activeMenu && activeSubmenu ? 'max-h-[500px] opacity-100 py-6 pointer-events-auto' : 'max-h-0 opacity-0 py-0 pointer-events-none'
-        } bg-white overflow-hidden`}
+          activeMenu && activeSubmenu
+            ? 'max-h-[500px] opacity-100 py-6 pointer-events-auto'
+            : 'max-h-0 opacity-0 py-0 pointer-events-none'
+        } bg-transparent overflow-hidden`}
+        
       >
         <div className=" max-w-7xl mx-auto px-4">
           <div className={`grid ${gridCols} gap-6`}>
