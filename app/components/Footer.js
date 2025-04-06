@@ -8,7 +8,7 @@ const handleIconClick = () => {
 
 const Footer = () => {
   return (
-    <footer className=" py-8 mt-[100px] ">
+    <footer className=" py-8 mt-[20px] ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
      
 
