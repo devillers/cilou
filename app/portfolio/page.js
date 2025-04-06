@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Card from "../components/Card"; // Adjust the path as necessary
+import Card from "../components/Reflexo_palmaire"; // Adjust the path as necessary
 
 export default function Home() {
   return (
