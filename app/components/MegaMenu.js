@@ -136,46 +136,53 @@ export default function MegaMenu() {
             </button>
           </div>
           <nav className="flex flex-col space-y-4 px-4 pb-6 mt-10">
-            {menuItems.map((item, i) => {
-              const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
+  {menuItems.map((item, i) => {
+    const isActive = pathname === item.href || pathname.startsWith(item.href + '/');
 
-              return (
-                <div key={i}>
-                  <Link
-                    href={item.href || '#'}
-                    className={`font-semibold text-md mb-3 uppercase ${
-                      isActive ? 'text-[#006878]' : 'hover:text-[#009996]'
-                    }`}
-                  >
-                    {item.title}
-                  </Link>
-                  {item.submenu && (
-                    <div className="grid grid-cols-2 gap-4 pl-4">
-                      {item.submenu.map((col, index) => (
-                        <div key={index}>
-                          {col.title && (
-                            <div className="text-sm mb-1 font-semibold uppercase">
-                              {col.title}
-                            </div>
-                          )}
-                          <ul className="space-y-1">
-                            {col.items.map((subItem, idx) => (
-                              <li
-                                key={idx}
-                                className="text-[10px] uppercase hover:text-[#009996] cursor-pointer leading-7"
-                              >
-                                <button className="w-full text-left">{subItem}</button>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </nav>
+    return (
+      <div key={i}>
+        <Link
+          href={item.href || '#'}
+          onClick={() => setMobileOpen(false)}
+          className={`font-semibold text-md mb-3 uppercase ${
+            isActive ? 'text-[#006878]' : 'hover:text-[#009996]'
+          }`}
+        >
+          {item.title}
+        </Link>
+        {item.submenu && (
+          <div className="grid grid-cols-2 gap-4 pl-4">
+            {item.submenu.map((col, index) => (
+              <div key={index}>
+                {col.title && (
+                  <div className="text-sm mb-1 font-semibold uppercase">
+                    {col.title}
+                  </div>
+                )}
+                <ul className="space-y-1">
+                  {col.items.map((subItem, idx) => (
+                    <li
+                      key={idx}
+                      className="text-[10px] uppercase hover:text-[#009996] cursor-pointer leading-7"
+                    >
+                      <button
+                        className="w-full text-left"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {subItem}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  })}
+</nav>
+
         </div>
       )}
     </header>

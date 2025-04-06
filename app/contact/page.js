@@ -25,7 +25,12 @@ export default function ContactPage() {
   return (
     <div className="max-w-xl mx-auto mt-10 p-4">
       <h1 className="text-2xl font-bold mb-4 text-[#009996]"style={{ fontFamily: 'Capriola, sans-serif' }}>Contactez moi </h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <p className='text-[12px] font-light leading-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis augue commodo, faucibus massa eu, iaculis urna. Proin et quam at est feugiat ultricies. Pellentesque commodo, velit non fermentum condimentum, lacus felis varius mi, et pharetra quam sapien eget lectus.</p>
+      <p className='text-[12px] font-light leading-5 mb-4'>ou par telephone  </p>
+      <p className='text-[12px] font-light leading-5 mb-4'>je me deplace sur les communes du Val Montjoie, Val d'Arly et pays du Mont Blanc </p>
+
+      <p className='text-[12px] font-light leading-5 mb-4'>En entreprise également dans la vallée de l'Arve </p>
+      <form onSubmit={handleSubmit} className="space-y-4 text-[12px] font-light leading-5">
         <input name="name" value={formData.name} onChange={handleChange}
           placeholder="Nom" className="w-full border rounded p-2" required />
         <input name="email" value={formData.email} onChange={handleChange}
