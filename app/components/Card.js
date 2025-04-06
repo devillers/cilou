@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState } from "react";
 
@@ -34,10 +34,10 @@ const RoundProductCard = () => {
       </div>
 
       <h3 className="text-center text-lg uppercase font-semibold text-gray-800">
-      réflexologie
+        réflexologie
       </h3>
       <p className="text-sm text-gray-500 text-center mt-1 mb-3">
-      Séance de réflexologie plantaire
+        Séance de réflexologie plantaire
       </p>
 
       <span className="text-[#006878] font-bold text-lg mb-2">60€</span>
