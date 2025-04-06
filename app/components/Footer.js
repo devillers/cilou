@@ -12,15 +12,21 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
      
 
-<div>
-  <div className="flex items-center gap-2">
-    {/* Using the FaReact icon */}
-    <CiFacebook className="mt-5 h-6 w-6 text-[#009996] cursor-pointer" onClick={handleIconClick} />
-  </div>
-  <p className="text-[10px] text-gray-600 mt-2 text-justify leading-6 pr-[30px]">
+
+
+      <div className="flex items-start gap-4">
+  <img
+    src="/pic.png"
+    alt="Logo"
+    className="h-30 w-auto ml-4"
+  />
+  <p className="text-[10px] text-gray-600 mt-2 text-justify leading-6">
     Découvrez la réflexologie : une méthode naturelle et apaisante pour soulager le stress et favoriser le bien-être en stimulant des points précis sur les pieds, les mains et les oreilles. Un pas vers une meilleure santé !
   </p>
 </div>
+
+  
+
 
         
         <div>
@@ -49,6 +55,10 @@ const Footer = () => {
     0609077438
   </a>
 </li>
+<div className="flex items-center gap-2">
+    {/* Using the FaReact icon */}
+    <CiFacebook className="mt-2 h-6 w-6 text-[#009996] cursor-pointer" onClick={handleIconClick} />
+  </div>
             
           </ul>
         </div>
