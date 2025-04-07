@@ -27,7 +27,7 @@ const RoundProductCard = () => {
       {/* Product image */}
       <div className="w-[120px] h-full rounded-full overflow-hidden mb-4 shadow-md transition-transform duration-300 transform hover:scale-105">
         <img
-          src="/fond.jpg"
+          src="/hand.png"
           alt="Product"
           className="w-full h-full object-cover"
         />
