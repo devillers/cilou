@@ -49,7 +49,7 @@ export default function MegaMenu() {
     <header className="shadow-sm relative z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between ">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="h-15 w-auto" />
+          <img src="/logo.png" alt="Logo" className="h-11 w-auto" />
         </div>
         <div className="hidden md:flex justify-center flex-1">
           <nav className="flex gap-8 items-center">
