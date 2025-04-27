@@ -15,8 +15,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-black/70 z-1"></div>
           <ul className="uppercase font-bold max-w-[900px] p-6 z-20">
             <li className="md:text-4xl text-6xl text-white/70">Praticienne   </li>
-            <li className="md:text-4xl text-6xl text-white">réflexologie et Shiatsu assis </li>
-            <li className="md:text-4xl text-6xl text-white/70"></li>
+            <li className="md:text-4xl text-6xl text-white">réflexologie  </li>
+            <li className="md:text-4xl text-6xl text-white/70"> Shiatsu assis</li>
             <li className="md:text-4xl text-6xl text-white">au pays du</li>
             <li className="md:text-4xl text-6xl text-white">Mont-Blanc</li> 
           </ul>
