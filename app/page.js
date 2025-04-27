@@ -1,15 +1,65 @@
-// app/page.js
-import CardPalmaire from "./components/Reflexo_palmaire"; // Adjust the path as necessary
-import CardPlantaire from "./components/Reflexo_plantaire"; // Adjust the path as necessary
+import { getMetadataForPage } from "./lib/metadata";
+
+export const metadata = getMetadataForPage({
+  title: "Accueil | Care Concierge",
+  description:
+    "Des chalets de luxe en Haute-Savoie avec un service d’exception.",
+  keywords: ["chalet", "conciergerie", "luxe", "haute savoie"],
+});
 
 export default function Home() {
   return (
-    <div className=" max-w-[1200px] mx-auto relative  text-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 gap-6 z-10 items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 relative z-10">
-        <CardPlantaire />
-        <CardPlantaire />
-        <CardPalmaire />
-        <CardPalmaire />
+    <div>
+      <section className="relative">
+        <div className="relative z-10 mx-auto justify-center flex flex-col min-h-[640px] bg-white bg-[url(/images/header.webp)] bg-cover bg-center">
+          <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-black/70 z-1"></div>
+          <ul className="uppercase font-bold max-w-[900px] p-6 z-20">
+            <li className="md:text-6xl text-6xl text-white/70">Praticienne   </li>
+            <li className="md:text-8xl text-6xl text-white">réflexologie et Shiatsu assis </li>
+            <li className="md:text-7xl text-6xl text-white/70"></li>
+            <li className="md:text-8xl text-6xl text-white">au pays du</li>
+            <li className="md:text-6xl text-6xl text-white">Mont-Blanc</li> 
+          </ul>
+        </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto mb-12 p-4">
+        <div className="text-gray-800 max-w-7xl p-6 mx-auto">
+          <ul>
+            <li>
+              <h5 className="text-5xl md:text-6xl uppercase font-thin">
+                Le service qui
+              </h5>
+            </li>
+            <li>
+              <h5 className="text-4xl md:text-6xl uppercase font-thin">
+                révèle tout le
+              </h5>
+            </li>
+            <li>
+              <h6 className="text-4xl md:text-5xl uppercase font-thin">
+                potentiel de
+              </h6>
+            </li>
+            <li>
+              <h6 className="text-3xl md:text-4xl uppercase font-thin">
+                votre bien
+              </h6>
+            </li>
+          </ul>
+          <div className="text-gray-800 max-w-6xl mx-auto flex flex-col items-center">
+            <p className="text-center text-lg font-thin py-10 italic">
+              Notre conciergerie premium orchestre chaque détail : shooting
+              photo professionnel, rédaction d’annonces optimisées, gestion
+              dynamique des calendriers et des tarifs, accueil personnalisé 7
+              j/7, linge hôtelier de qualité, ménage méticuleux, maintenance
+              préventive et assistance voyageurs en continu. Vous profitez d’une
+              valorisation maximale et d’avis cinq étoiles, tandis que nous
+              veillons à la sécurité de votre patrimoine et à la sérénité de
+              votre expérience propriétaire.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

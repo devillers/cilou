@@ -1,71 +1,97 @@
 import React from "react";
-import { CiFacebook } from "react-icons/ci";
-import { FiPhone } from "react-icons/fi"; // Feather phone icon
-
-const handleIconClick = () => {
-  window.open(
-    "https://www.facebook.com/profile.php?id=61570937333470&__cft__[0]=AZWwGVFhoxmOeCk-owjfXREarNpgyHjr4SoNLZf8u2fNdchvNVJDFcQ46eF506d8L6FcvnpBMW0BqXMyx3tFBqAvlnUZmIiC1if6TnjGzzWV1YLf80-vwgq1AzxwvZeLvDyQBfX0rlXQdoLBAjXKKBwZX6oacwyKn8spUTzFi8Qqr9czp8pTcgL3MwD-oc0Qjzw&__tn__=-]K-R",
-    "_blank",
-    "noopener,noreferrer"
-  );
-};
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className=" py-8 mt-[20px] ">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-        <div className="flex items-start gap-4">
-          <img src="/pic.png" alt="Logo" className="h-30 w-auto ml-4" />
-          <p className="text-[10px] text-gray-600 mt-2 text-justify leading-6">
-            Découvrez la réflexologie : une méthode naturelle et apaisante pour
-            soulager le stress et favoriser le bien-être en stimulant des points
-            précis sur les pieds, les mains et les oreilles. Un pas vers une
-            meilleure santé !
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+        <div>
+          <div className="flex items-center gap-2">
+            <h3 className="font-bold text-[12px]">Care Concierge</h3>
+            <span className="text-[#bd9254] text-[12px]">Luxury</span>
+          </div>
+          <p className="text-[10px] text-gray-600 mt-2 text-justify pr-6 leading-6">
+            est une marque de Care Concierge & Properties, société de gestion
+            immobilière et mobilière spécialisée dans la gestion locative courte
+            durée.
           </p>
         </div>
-
-        <div>
-          <h3 className="font-bold text-[12px]">Plan du site</h3>
+        <div className="left">
+          <h3 className="font-bold text-[12px]">Pages</h3>
           <ul className="text-[10px] text-gray-600 space-y-2 mt-2">
-            <li>Accueil</li>
-            <li>Porfolio</li>
-            <li>Blog</li>
-
-            <li>Prendre RDV</li>
-            <li>CGV</li>
-            <li>Mentions légales</li>
+            <li className="hover:text-[#bd9345] cursor-pointer">
+              <Link
+                href="/repertoire"
+                className="hover:text-[#bd9345] transition-colors duration-200"
+              >
+                Le répertoire
+              </Link>
+            </li>
+            <li className="hover:text-[#bd9345] cursor-pointer">
+              <Link
+                href="/conciergerie"
+                className="hover:text-[#bd9345] transition-colors duration-200"
+              >
+                La conciergerie
+              </Link>
+            </li>
+            <li className="hover:text-[#bd9345] cursor-pointer">
+              <Link
+                href="/blog"
+                className="hover:text-[#bd9345] transition-colors duration-200"
+              >
+                Blog
+              </Link>
+            </li>
+            <li className="hover:text-[#bd9345] cursor-pointer">
+              <Link
+                href="/vente"
+                className="hover:text-[#bd9345] transition-colors duration-200"
+              >
+                Vente
+              </Link>
+            </li>
+            <li className="hover:text-[#bd9345] cursor-pointer">
+              <Link
+                href="/contact"
+                className="hover:text-[#bd9345] transition-colors duration-200"
+              >
+                Contact
+              </Link>
+            </li>
+            <li className="font-semibold hover:text-[#bd9345] cursor-pointer">
+              <Link
+                href="/mentions-legales"
+                className="hover:text-[#bd9345] transition-colors duration-200"
+              >
+                Mentions légales
+              </Link>
+            </li>
+            <li className="font-semibold hover:text-[#bd9345] cursor-pointer">
+              <Link
+                href="/politique-de-confidentialite"
+                className="hover:text-[#bd9345] transition-colors duration-200"
+              >
+                Politique de Confidentialité
+              </Link>
+            </li>
           </ul>
         </div>
+     
         <div>
-          <h3 className="font-bold text-[12px]">Me trouver </h3>
+          <h3 className="font-bold text-[12px]">Zones que nous desservons</h3>
           <ul className="text-[10px] text-gray-600 space-y-2 mt-2">
-            <li>Cecile Durindel </li>
-            <li>EI siret 79333537300023</li>
-            <li>Route de Saint Nicolas</li>
-            <li>74170 Saint Gervais les Bains</li>
-            <li className="flex items-center gap-2">
-              <FiPhone className="text-[#009996]" />
-              <a
-                href="tel:0609077438"
-                className="text-gray-600  hover:text-[#009996]"
-              >
-                0609077438
-              </a>
-            </li>
-            <div className="flex items-center gap-2">
-              {/* Using the FaReact icon */}
-              <CiFacebook
-                className="mt-2 h-6 w-6 text-[#009996] cursor-pointer"
-                onClick={handleIconClick}
-              />
-            </div>
+            <li>Argentière - 74400</li>
+            <li>Chamonix - 74400</li>
+            <li>Les Houches - 74310</li>
+            <li>Saint Gervais les Bains - 74170</li>
+            <li>Combloux - 74920</li>
+            <li>Megève - 74120</li>
+            <li>Sallanches - 74700</li>
           </ul>
         </div>
       </div>
-      {/* <div className="text-center text-gray-500 text-[10px] mt-8">
-        <p>Informations Légales</p>
-        <button className="text-gray-600 hover:underline">Français</button>
-      </div> */}
+    
     </footer>
   );
 };
