@@ -14,11 +14,11 @@ export default function Home() {
         <div className="relative z-10 mx-auto justify-center flex flex-col min-h-[640px] bg-white bg-[url(/images/header.webp)] bg-cover bg-center">
           <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-black/70 z-1"></div>
           <ul className="uppercase font-bold max-w-[900px] p-6 z-20">
-            <li className="md:text-6xl text-6xl text-white/70">Praticienne   </li>
-            <li className="md:text-8xl text-6xl text-white">réflexologie et Shiatsu assis </li>
-            <li className="md:text-7xl text-6xl text-white/70"></li>
-            <li className="md:text-8xl text-6xl text-white">au pays du</li>
-            <li className="md:text-6xl text-6xl text-white">Mont-Blanc</li> 
+            <li className="md:text-4xl text-6xl text-white/70">Praticienne   </li>
+            <li className="md:text-4xl text-6xl text-white">réflexologie et Shiatsu assis </li>
+            <li className="md:text-4xl text-6xl text-white/70"></li>
+            <li className="md:text-4xl text-6xl text-white">au pays du</li>
+            <li className="md:text-4xl text-6xl text-white">Mont-Blanc</li> 
           </ul>
         </div>
       </section>
