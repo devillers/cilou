@@ -17,8 +17,16 @@ const Footer = () => {
           
         </div>
         <div className="left">
-          <h3 className="font-bold text-[12px]">Accueil</h3>
+          <h3 className="font-bold text-[12px]">Pages</h3>
           <ul className="text-[10px] text-gray-600 space-y-2 mt-2">
+          <li className="hover:text-[#bd9345] cursor-pointer">
+              <Link
+                href="/repertoire"
+                className="hover:text-[#bd9345] transition-colors duration-200"
+              >
+                Accueil
+              </Link>
+            </li>
             <li className="hover:text-[#bd9345] cursor-pointer">
               <Link
                 href="/repertoire"
