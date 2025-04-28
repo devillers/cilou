@@ -53,26 +53,26 @@ export default function Home() {
               </h6>
             </li>
           </ul>
-          <div className="text-gray-800 max-w-6xl mx-auto flex flex-col items-center">
-            <p className="text-center text-lg font-thin py-10 italic">
+          <div className="text-gray-800 max-w-6xl mx-auto flex flex-col items-center py-10">
+            <p className="text-center text-lg font-thin py-2 italic">
               La réflexologie est une technique ancestrale, douce et profonde de
               digito-pression qui part du principe que les pieds, les mains, la
               tête, divisés en points et en zones réflexes, sont la
               représentation miniature du corps humain.{" "}
             </p>
 
-            <p className="text-center text-lg font-thin py-10 italic">
+            <p className="text-center text-lg font-thin py-2 italic">
               Un toucher spécifique appliqué sur une zone réflexe donnée permet
               d’avoir un effet sur la partie du corps associée afin de soulager
               les tensions ou les déséquilibres qui s’y trouvent et ainsi de
               rétablir l’équilibre naturel du corps ou le maintien de celui-ci.{" "}
             </p>
 
-            <p className="text-center text-lg font-thin py-10 italic">
+            <p className="text-center text-lg font-thin py-2 italic">
               En d’autres mots, l’approche soutient l’organisme afin qu’il
               puisse fonctionner de manière optimale.
             </p>
-            <p className="text-center text-lg font-thin py-10 italic">
+            <p className="text-center text-lg font-thin py-2 italic">
               Rien de fou ni de magique, saviez-vous qu’il y a plus de 7 000
               terminaisons nerveuses dans chaque pied et plus de 3 000 dans
               chaque main ?
