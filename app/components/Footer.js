@@ -7,24 +7,24 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
         <div>
           <div className="flex items-center gap-2">
-            <h3 className="font-bold text-[12px]">Care Concierge</h3>
-            <span className="text-[#bd9254] text-[12px]">Luxury</span>
+            <h3 className="font-bold text-[12px]">Pause</h3>
+            <span className="text-[#bd9254] text-[12px]">Reflexologie</span>
           </div>
           <p className="text-[10px] text-gray-600 mt-2 text-justify pr-6 leading-6">
-            est une marque de Care Concierge & Properties, société de gestion
-            immobilière et mobilière spécialisée dans la gestion locative courte
-            durée.
+            Cécile Durindel, Praticienne en réflexologie et Shiatsu assis au
+            pays du Mont-Blanc
           </p>
+          
         </div>
         <div className="left">
-          <h3 className="font-bold text-[12px]">Pages</h3>
+          <h3 className="font-bold text-[12px]">Accueik</h3>
           <ul className="text-[10px] text-gray-600 space-y-2 mt-2">
             <li className="hover:text-[#bd9345] cursor-pointer">
               <Link
                 href="/repertoire"
                 className="hover:text-[#bd9345] transition-colors duration-200"
               >
-                Le répertoire
+                Pratique
               </Link>
             </li>
             <li className="hover:text-[#bd9345] cursor-pointer">
@@ -32,7 +32,7 @@ const Footer = () => {
                 href="/conciergerie"
                 className="hover:text-[#bd9345] transition-colors duration-200"
               >
-                La conciergerie
+                Prendre RDV
               </Link>
             </li>
             <li className="hover:text-[#bd9345] cursor-pointer">
@@ -43,14 +43,7 @@ const Footer = () => {
                 Blog
               </Link>
             </li>
-            <li className="hover:text-[#bd9345] cursor-pointer">
-              <Link
-                href="/vente"
-                className="hover:text-[#bd9345] transition-colors duration-200"
-              >
-                Vente
-              </Link>
-            </li>
+        
             <li className="hover:text-[#bd9345] cursor-pointer">
               <Link
                 href="/contact"
@@ -77,8 +70,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-     
-        <div>
+
+        {/* <div>
           <h3 className="font-bold text-[12px]">Zones que nous desservons</h3>
           <ul className="text-[10px] text-gray-600 space-y-2 mt-2">
             <li>Argentière - 74400</li>
@@ -89,9 +82,8 @@ const Footer = () => {
             <li>Megève - 74120</li>
             <li>Sallanches - 74700</li>
           </ul>
-        </div>
+        </div> */}
       </div>
-    
     </footer>
   );
 };

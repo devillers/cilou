@@ -13,18 +13,12 @@ export default function Home() {
       <section className="relative">
         <div className="relative z-10 mx-auto justify-center flex flex-col min-h-[640px] bg-white bg-[url(/images/header.webp)] bg-cover bg-center">
           <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-black/70 z-1"></div>
-          <ul className="uppercase font-bold max-w-[900px] p-6 z-20">
-            <li className="text-6xl md:text-8xl  text-white/70">
-              Praticienne{" "}
-            </li>
-            <li className="text-[55px] md:text-8xl  text-white">
-              réflexologie{" "}
-            </li>
-            <li className="text-[55px] md:text-7xl  text-white/70">
-              & Shiatsu assis
-            </li>
-            <li className="text-[55px] md:text-8xl  text-white">au pays du</li>
-            <li className="text-[55px] md:text-6xl  text-white">Mont-Blanc</li>
+          <ul className="uppercase font-bold max-w-[900px] p-4 z-20">
+            <li className="text-5xl md:text-8xl  text-white/70">Praticienne   </li>
+            <li className="text-4xl md:text-8xl  text-white">réflexologie <span className="text-5xl md:text-8xl">&</span></li>
+            <li className="text-5xl md:text-7xl  text-white/70">Shiatsu assis</li>
+            <li className="text-5xl md:text-8xl  text-white">au pays du</li>
+            <li className="text-5xl md:text-6xl  text-white">Mont-Blanc</li> 
           </ul>
         </div>
       </section>
@@ -34,35 +28,38 @@ export default function Home() {
           <ul>
             <li>
               <h5 className="text-5xl md:text-6xl uppercase font-thin">
-                Le service qui
+              Cécile Durindel
               </h5>
             </li>
             <li>
               <h5 className="text-4xl md:text-6xl uppercase font-thin">
-                révèle tout le
+             réflexologie &
               </h5>
             </li>
             <li>
               <h6 className="text-4xl md:text-5xl uppercase font-thin">
-                potentiel de
+              Shiatsu assis 
               </h6>
             </li>
             <li>
               <h6 className="text-3xl md:text-4xl uppercase font-thin">
-                votre bien
+              au pays du
+              Mont-Blanc
               </h6>
             </li>
           </ul>
           <div className="text-gray-800 max-w-6xl mx-auto flex flex-col items-center">
+         
             <p className="text-center text-lg font-thin py-10 italic">
-              Notre conciergerie premium orchestre chaque détail : shooting
-              photo professionnel, rédaction d’annonces optimisées, gestion
-              dynamique des calendriers et des tarifs, accueil personnalisé 7
-              j/7, linge hôtelier de qualité, ménage méticuleux, maintenance
-              préventive et assistance voyageurs en continu. Vous profitez d’une
-              valorisation maximale et d’avis cinq étoiles, tandis que nous
-              veillons à la sécurité de votre patrimoine et à la sérénité de
-              votre expérience propriétaire.
+            La réflexologie est une technique ancestrale, douce et profonde de digito-pression qui
+part du principe que les pieds, les mains, la tête, divisés en points et en zones réflexes,
+sont la représentation miniature du corps humain. Un toucher spécifique appliqué sur
+une zone réflexe donnée permet d’avoir un effet sur la partie du corps associée afin de
+soulager les tensions ou les déséquilibres qui s’y trouvent et ainsi de rétablir l’équilibre
+naturel du corps ou le maintien de celui-ci. En d’autres mots, l’approche soutient
+l’organisme afin qu’il puisse fonctionner de manière optimale.
+Rien de fou ni de magique, saviez-vous qu’il y a plus de 7 000 terminaisons nerveuses
+dans chaque pied et plus de 3 000 dans chaque main ?
             </p>
           </div>
         </div>
