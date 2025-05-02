@@ -1,14 +1,29 @@
 import { getMetadataForPage } from "./lib/metadata";
 import Bto from "./components/BtoRdv";
+import Link from "next/link";
 
 export const metadata = getMetadataForPage({
   title: "Accueil | Pause Réflexologie",
   description: "Réflexologie & Shiatsu assis.",
   keywords: [
-    "Shiatsu", "Réflexologie", "saint gervais les bains", "chamonix", "megeve",
-    "saint nicolas de veroce", "val montjoie", "val d'arley", "pays du mont blanc",
-    "vallee de l'arve", "bien etre", "relaxation", "stress", "tension",
-    "fatigue", "soulager", "detente", "haute-savoie"
+    "Shiatsu",
+    "Réflexologie",
+    "saint gervais les bains",
+    "chamonix",
+    "megeve",
+    "saint nicolas de veroce",
+    "val montjoie",
+    "val d'arley",
+    "pays du mont blanc",
+    "vallee de l'arve",
+    "bien etre",
+    "relaxation",
+    "stress",
+    "tension",
+    "fatigue",
+    "soulager",
+    "detente",
+    "haute-savoie",
   ],
   openGraph: {
     title: "Accueil | Pause Réflexologie",
@@ -32,30 +47,28 @@ export const metadata = getMetadataForPage({
   },
 });
 
-
 export default function Home() {
   return (
     <div>
       <section className="relative">
         <div className="relative z-10 mx-auto justify-center flex flex-col min-h-[640px] bg-white bg-[url(/images/header.webp)] bg-cover bg-center p-6">
-          <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-black/70 z-1"></div>
+          <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-black/70 z-10"></div>
           <ul className="uppercase font-bold max-w-[900px] z-20">
-            <li className="text-5xl md:text-8xl  text-white/70">
-              Praticienne{" "}
-            </li>
-            <li className="text-5xl md:text-8xl  text-white">
+            <li className="text-5xl md:text-8xl text-white/70">Praticienne</li>
+            <li className="text-5xl md:text-8xl text-white">
               réflexologie <span className="text-5xl md:text-8xl"></span>
             </li>
-            <li className="text-5xl md:text-7xl  text-white/70">
-            & Shiatsu assis
+            <li className="text-5xl md:text-7xl text-white/70">
+              & Shiatsu assis
             </li>
-            <li className="text-5xl md:text-8xl  text-white">au pays du</li>
-            <li className="text-5xl md:text-6xl  text-white">Mont-Blanc</li>
+            <li className="text-5xl md:text-8xl text-white">au pays du</li>
+            <li className="text-5xl md:text-6xl text-white">Mont-Blanc</li>
           </ul>
+          <Bto />
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto p-4      ">
+      <section className="max-w-5xl mx-auto p-4 ">
         <div className="flex flex-col text-gray-800 max-w-7xl mx-auto">
           <ul>
             <li>
@@ -68,7 +81,7 @@ export default function Home() {
                 réflexologie & Shiatsu assis
               </h2>
             </li>
-         
+
             <li>
               <h4 className="text-center md:text-left text-2xl sm:text-4xl  md:text-6xl uppercase font-thin">
                 au pays du Mont-Blanc
@@ -138,7 +151,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="apropros" className="w-full mx-auto mb-12 bg-[#F7F3EC]  p-4   ">
+      <section
+        id="apropros"
+        className="w-full mx-auto mb-12 bg-[#F7F3EC]  p-4   "
+      >
         <div className="text-gray-800 max-w-5xl mx-auto">
           <h5 className="text-xl md:text-2xl  uppercase font-semibold text-[#006778] mb-4 mt-10">
             à propos
@@ -146,61 +162,58 @@ export default function Home() {
           <p className="font-thin py-2 text-sm leading-6 text-justify">
             Bonjour et bienvenue, Je m’appelle Cécile, amoureuse de ma région et
             installée à Saint-Nicolas-de-Véroce, au cœur des montagnes qui
-            inspirent mes pratiques.</p>
-            <p className="font-thin py-2 text-sm leading-6 text-justify ">
-              Guidée par une profonde curiosité et riche de plusieurs
-              expériences professionnelles, j’ai trouvé ma vocation :
-              accompagner chacun vers plus de bien-être et de sérénité.
-            </p>
-            <p className="font-thin py-2 text-sm leading-6 text-justify ">
-              Certifiée en réflexologie plantaire, palmaire, ventrale et
-              crânienne, ainsi qu’en shiatsu assis, je vous propose des séances
-              personnalisées pour soulager le stress, les tensions et la
-              fatigue. À l’image du colibri, je crois que chaque geste compte
-              pour ramener plus d'équilibre dans votre quotidien.
-            </p>
-            <p  className="font-thin py-2 text-sm leading-6 text-justify">
-              {" "}
-              Formée au Centre Réflexo Naturel de La Roche-sur-Foron et forte de
-              cinq années d’expérience comme assistante de vie, je suis
-              particulièrement attentive aux besoins des personnes âgées et de
-              leurs proches.
-            </p>
-            <p className="font-thin py-2 text-sm leading-6 text-justify ">
-              {" "}
-              J'interviens à domicile, en entreprise dans le cadre du bien-être
-              au travail, en EHPAD et en résidences seniors, auprès des
-              résidents comme du personnel.
-            </p>
-            <p className="font-thin py-2 text-sm leading-6 text-justify">
-              {" "}
-              À partir de septembre 2025, je vous accueillerai également en
-              cabinet. Je me déplace dans tout le Val Montjoie, le Val d’Arly,
-              le Pays du Mont-Blanc et la Vallée de l’Arve.
-            </p>
-            <p className="font-thin py-2 text-sm leading-6 text-justify ">
-              Offrez-vous un moment de détente… ou faites-en cadeau à ceux que
-              vous aimez ! Contactez-moi pour réserver votre séance.
-            </p>
-          </div>
-        </section>
+            inspirent mes pratiques.
+          </p>
+          <p className="font-thin py-2 text-sm leading-6 text-justify ">
+            Guidée par une profonde curiosité et riche de plusieurs expériences
+            professionnelles, j’ai trouvé ma vocation : accompagner chacun vers
+            plus de bien-être et de sérénité.
+          </p>
+          <p className="font-thin py-2 text-sm leading-6 text-justify ">
+            Certifiée en réflexologie plantaire, palmaire, ventrale et
+            crânienne, ainsi qu’en shiatsu assis, je vous propose des séances
+            personnalisées pour soulager le stress, les tensions et la fatigue.
+            À l’image du colibri, je crois que chaque geste compte pour ramener
+            plus d'équilibre dans votre quotidien.
+          </p>
+          <p className="font-thin py-2 text-sm leading-6 text-justify">
+            {" "}
+            Formée au Centre Réflexo Naturel de La Roche-sur-Foron et forte de
+            cinq années d’expérience comme assistante de vie, je suis
+            particulièrement attentive aux besoins des personnes âgées et de
+            leurs proches.
+          </p>
+          <p className="font-thin py-2 text-sm leading-6 text-justify ">
+            {" "}
+            J'interviens à domicile, en entreprise dans le cadre du bien-être au
+            travail, en EHPAD et en résidences seniors, auprès des résidents
+            comme du personnel.
+          </p>
+          <p className="font-thin py-2 text-sm leading-6 text-justify">
+            {" "}
+            À partir de septembre 2025, je vous accueillerai également en
+            cabinet. Je me déplace dans tout le Val Montjoie, le Val d’Arly, le
+            Pays du Mont-Blanc et la Vallée de l’Arve.
+          </p>
+          <p className="font-thin py-2 text-sm leading-6 text-justify ">
+            Offrez-vous un moment de détente… ou faites-en cadeau à ceux que
+            vous aimez ! Contactez-moi pour réserver votre séance.
+          </p>
+        </div>
+      </section>
 
-        <section id="rdv" className="w-full mx-auto mb-12   p-4   ">
+      <section id="rdv" className="w-full mx-auto mb-12   p-4   ">
         <div className="text-gray-800 max-w-5xl mx-auto">
           <h5 className="text-xl md:text-2xl  uppercase font-semibold text-[#006778] mb-4 mt-10">
-           Prendre RDV
+            Prendre RDV
           </h5>
           <p className="font-thin py-2 text-sm leading-6">
             Bonjour et bienvenue, Je m’appelle Cécile, amoureuse de ma région et
             installée à Saint-Nicolas-de-Véroce, au cœur des montagnes qui
-            inspirent mes pratiques.</p>
-           
-<Bto/>
-
-          </div>
-        </section>
-   
-    
+            inspirent mes pratiques.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
