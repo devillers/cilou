@@ -12,8 +12,8 @@ export default function RdvButton() {
         rel="noopener noreferrer"
         className="relative z-20"
       >
-  <span className="inline-block font-thin text-white bg-[#006778] shadow-md uppercase px-6 py-3 rounded border-[1px] border-white animate-pulse transition-all duration-800 ease-in-out hover:bg-[#0097a7] cursor-pointer">
-  RDV à domicile
+  <span className="inline-block font-thin text-white bg-[#009992] shadow-md uppercase px-6 py-3 rounded border-[1px] border-white animate-pulse transition-all duration-800 ease-in-out hover:bg-[#0097a7] cursor-pointer">
+  prendre rendez-vous
 </span>
 
       </Link>

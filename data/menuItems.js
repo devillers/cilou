@@ -36,9 +36,9 @@ const menuItems = [
     //   },
     // ],
   },
-  { title: "à propos ", href: "#apropros" },
+  { title: "à propos ", href: "/#apropros" },
   { title: "rdv", href: "https://www.crenolibre.fr/moteur/124911_durindel-cecile", target:"_blank", rel:"noopener noreferrer"},
-  { title: "contact", href: "#contact" },
+  { title: "contact", href: "/#contact" },
   {
     title: "Blog", href: "/blog",
     // submenu: [

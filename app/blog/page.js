@@ -1,29 +1,32 @@
-import Image from "next/image";
+
+import HeroHeader from "../components/HeroHeader"
 
 export default function Home() {
   return (
     <div className="relative">
-      <section className="relative">
-        <div className="relative z-10 mx-auto justify-center flex flex-col min-h-[640px] bg-white bg-[url(/images/header.webp)] bg-cover bg-center p-6">
-          <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-black/70 z-1"></div>
-          <ul className="uppercase font-bold max-w-[900px] z-20">
-            <li className="text-5xl md:text-8xl  text-white/70">
-              Praticienne{" "}
-            </li>
-            <li className="text-5xl md:text-8xl  text-white">
-              réflexologie <span className="text-5xl md:text-8xl"></span>
-            </li>
-            <li className="text-5xl md:text-7xl  text-white/70">
-              & Shiatsu assis
-            </li>
-            <li className="text-5xl md:text-8xl  text-white">au pays du</li>
-            <li className="text-5xl md:text-6xl  text-white">Mont-Blanc</li>
-          </ul>
-        </div>
-      </section>
+     <HeroHeader />
 
       <section className="max-w-5xl mx-auto mb-12   p-4   ">
-        <h1
+      
+        <ul className="py-4">
+              <li>
+                <h3 className="text-center  text-5xl sm:text-3xl md:text-5xl uppercase font-thin">
+                  Nos articles de blog
+                </h3>
+              </li>
+              <li>
+                <h2 className="text-center text-2xl sm:text-3xl  mt-2 md:text-3xl uppercase font-thin">
+                  nos conseils,   nos astuces ...
+                </h2>
+              </li>
+
+              {/* <li>
+                <h4 className="text-center  text-2xl sm:text-4xl  md:text-4xl uppercase font-thin">
+              
+                </h4>
+              </li> */}
+            </ul>
+            <h1
           className="text-2xl font-bold mb-4 text-[#009996]"
           style={{ fontFamily: "Capriola, sans-serif" }}
         >

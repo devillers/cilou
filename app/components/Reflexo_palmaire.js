@@ -2,16 +2,16 @@
 
 import React, { useState } from "react";
 
-const RoundProductCard = () => {
+export default function ReflexoPalmaireCard() {
   const [liked, setLiked] = useState(false);
 
   return (
-    <div className="w-70 h-70 bg-white rounded-full shadow-xl flex flex-col items-center justify-center p-6 relative hover:shadow-2xl transition-shadow duration-300">
+    <div className="bg-white rounded-3xl shadow w-full max-w-[240px] aspect-[4/4] mx-auto flex flex-col items-center justify-start text-center pt-6 relative">
       {/* Heart icon */}
       <button
         onClick={() => setLiked(!liked)}
-        className="absolute top-0 left-0 bg-white p-2 rounded-full shadow hover:shadow-md transition"
-        aria-label="Add to favorites"
+        className="absolute top-2 left-2 bg-white p-2 rounded-full shadow hover:shadow-md transition"
+        aria-label="Ajouter aux favoris"
       >
         <svg
           className={`w-5 h-5 ${
@@ -24,29 +24,25 @@ const RoundProductCard = () => {
         </svg>
       </button>
 
-      {/* Product image */}
-      <div className="w-[120px] h-full rounded-full overflow-hidden mb-4 shadow-md transition-transform duration-300 transform hover:scale-105">
-        <img
-          src="/hand.png"
-          alt="Product"
-          className="w-full h-full object-cover"
-        />
-      </div>
+      {/* Image */}
+      <img
+        src="/hand.png"
+        alt="Réflexologie palmaire"
+        className="w-30 h-30 object-cover rounded-full mb-3 border-4 border-white shadow-sm"
+      />
 
-      <h3 className="text-center text-lg uppercase font-semibold text-gray-800">
-        réflexologie <span className="text-[12px] text-[#006878]"> 40 mn</span>
+      {/* Title */}
+      <h3 className="text-md font-semibold leading-tight mb-1 uppercase text-gray-800">
+        Réflexologie <span className="text-[12px] text-[#006878]">40 mn</span>
       </h3>
-      <p className="text-sm text-gray-500 font-light text-center mt-1 mb-3">
-        Séance de réflexologie <span className="text-[12px] text-pink-500 font-semibold uppercase"> palmaire</span>
+
+      {/* Description */}
+      <p className="text-sm font-light text-gray-500 px-4 mb-2">
+        Séance de <span className="text-pink-500 font-semibold uppercase text-[12px]">palmaire</span>
       </p>
 
-      <span className="text-[#006878] font-bold text-lg mb-2">40€</span>
-
-      {/* <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-full transition">
-        Add to Cart
-      </button> */}
+      {/* Price */}
+      <span className="text-[#006878] font-bold text-lg mb-4">40€</span>
     </div>
   );
-};
-
-export default RoundProductCard;
+}
