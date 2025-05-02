@@ -7,7 +7,7 @@ export default function Home() {
       <img
         src="/fond.jpg"
         alt="Background"
-        className="absolute top-0 left-0 w-full h-full object-cover   z-10"
+        className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
 
       {/* Content wrapper */}

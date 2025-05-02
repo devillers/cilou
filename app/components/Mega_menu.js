@@ -63,7 +63,7 @@ export default function MegaMenu() {
   }, [pathname]);
 
   return (
-    <header className="border-b shadow-sm relative z-50">
+    <header className=" shadow-sm relative z-50">
       {/* percentage loader bar */}
       <AnimatePresence>
         {progress > 0 && (
@@ -73,7 +73,7 @@ export default function MegaMenu() {
             animate={{ width: `${progress}%` }}
             exit={{ width: 0 }}
             transition={{ ease: 'linear', duration: 0.2 }}
-            className="fixed top-0 left-0 h-1 bg-[#bd9254] z-[100]"
+            className="fixed top-0 left-0 h-1 bg-[#006778]  z-[100]"
           />
         )}
       </AnimatePresence>
@@ -83,7 +83,7 @@ export default function MegaMenu() {
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
           {/* <div className="md:hidden md:text-md lg:block lg:text-xl uppercase">
-            Pause <span className="text-[#bd9254]">Reflexo</span>
+            Pause <span className="text-[#006778]">Reflexo</span>
           </div> */}
         </div>
 
@@ -114,8 +114,8 @@ export default function MegaMenu() {
                       navigate(item.href);
                     }}
                     className={`
-                      text-[11px] uppercase leading-4 hover:text-[#bd9254]
-                      ${pathname === item.href ? 'text-[#bd9254]/80' : 'text-[#293d4c]'}
+                      text-[11px] uppercase leading-4 hover:text-[#006778]
+                      ${pathname === item.href ? 'text-[#006778]/80' : 'text-[#293d4c]'}
                     `}
                   >
                     {item.title}
@@ -127,7 +127,7 @@ export default function MegaMenu() {
                     }
                     aria-haspopup="true"
                     aria-expanded={activeMenu === item.title}
-                    className="text-[11px] uppercase leading-4 text-[#293d4c] hover:text-[#bd9254]"
+                    className="text-[11px] uppercase leading-4 text-[#293d4c] hover:text-[#006778]"
                   >
                     {item.title}
                   </button>
@@ -167,7 +167,7 @@ export default function MegaMenu() {
                 {activeSubmenu.map((col, idx) => (
                   <div key={idx}>
                     {col.title && (
-                      <div className="text-[12px] mb-2 text-[#bd9254] select-none">
+                      <div className="text-[12px] mb-2 text-[#006778] select-none">
                         {col.title}
                       </div>
                     )}
@@ -180,7 +180,7 @@ export default function MegaMenu() {
                               e.preventDefault();
                               navigate(subItem.href);
                             }}
-                            className="block w-full text-[10px] uppercase hover:text-[#bd9254]"
+                            className="block w-full text-[10px] uppercase hover:text-[#006778]"
                           >
                             {subItem.title}
                           </a>
@@ -230,7 +230,7 @@ export default function MegaMenu() {
                           ? navigate(item.href, 500)
                           : setActiveMenu(activeMenu === item.title ? null : item.title)
                       }
-                      className="font-semibold uppercase text-sm mb-3 cursor-pointer text-white hover:text-black hover:bg-white/80 rounded p-2 text-left w-full"
+                      className="font-semibold uppercase text-sm mb-3 cursor-pointer text-white hover:text-[#006778] hover:bg-white/80 rounded p-2 text-left w-full"
                     >
                       {item.title}
                     </button>
@@ -239,7 +239,7 @@ export default function MegaMenu() {
                         {item.submenu.map((col, idx) => (
                           <div key={idx}>
                             {col.title && (
-                              <div className="text-sm mb-1 font-thin text-[#bd9254] uppercase">
+                              <div className="text-sm mb-1 font-thin text-[#006778] uppercase">
                                 {col.title}
                               </div>
                             )}

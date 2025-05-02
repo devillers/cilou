@@ -8,7 +8,7 @@ const Footer = () => {
         <div>
           <div className="flex items-center gap-2">
             <h3 className="font-bold text-[12px]">Pause</h3>
-            <span className="text-[#bd9254] text-[12px]">Reflexologie</span>
+            <span className="text-[#006778] text-[12px]">Reflexologie</span>
           </div>
           <p className="text-[10px] text-gray-600 mt-2 text-justify pr-6 leading-6">
             Cécile Durindel, Praticienne en réflexologie et Shiatsu assis au
@@ -19,59 +19,59 @@ const Footer = () => {
         <div className="left">
           <h3 className="font-bold text-[12px]">Pages</h3>
           <ul className="text-[10px] text-gray-600 space-y-2 mt-2">
-          <li className="hover:text-[#bd9345] cursor-pointer">
+          <li className="hover:text-[#006778] cursor-pointer">
               <Link
-                href="/repertoire"
-                className="hover:text-[#bd9345] transition-colors duration-200"
+                href="/"
+                className="hover:text-[#006778] transition-colors duration-200"
               >
                 Accueil
               </Link>
             </li>
-            <li className="hover:text-[#bd9345] cursor-pointer">
+            <li className="hover:text-[#006778] cursor-pointer">
               <Link
-                href="/repertoire"
-                className="hover:text-[#bd9345] transition-colors duration-200"
+                href="/soins"
+                className="hover:text-[#006778] transition-colors duration-200"
               >
-                Pratique
+                Les soins
               </Link>
             </li>
-            <li className="hover:text-[#bd9345] cursor-pointer">
+            <li className="hover:text-[#006778] cursor-pointer">
               <Link
                 href="/conciergerie"
-                className="hover:text-[#bd9345] transition-colors duration-200"
+                className="hover:text-[#006778] transition-colors duration-200"
               >
                 Prendre RDV
               </Link>
             </li>
-            <li className="hover:text-[#bd9345] cursor-pointer">
+            <li className="hover:text-[#006778] cursor-pointer">
               <Link
                 href="/blog"
-                className="hover:text-[#bd9345] transition-colors duration-200"
+                className="hover:text-[#006778] transition-colors duration-200"
               >
                 Blog
               </Link>
             </li>
         
-            <li className="hover:text-[#bd9345] cursor-pointer">
+            <li className="hover:text-[#006778] cursor-pointer">
               <Link
                 href="/contact"
-                className="hover:text-[#bd9345] transition-colors duration-200"
+                className="hover:text-[#006778] transition-colors duration-200"
               >
                 Contact
               </Link>
             </li>
-            <li className="font-semibold hover:text-[#bd9345] cursor-pointer">
+            <li className="font-semibold hover:text-[#006778] cursor-pointer">
               <Link
                 href="/mentions-legales"
-                className="hover:text-[#bd9345] transition-colors duration-200"
+                className="hover:text-[#006778] transition-colors duration-200"
               >
                 Mentions légales
               </Link>
             </li>
-            <li className="font-semibold hover:text-[#bd9345] cursor-pointer">
+            <li className="font-semibold hover:text-[#006778] cursor-pointer">
               <Link
                 href="/politique-de-confidentialite"
-                className="hover:text-[#bd9345] transition-colors duration-200"
+                className="hover:text-[#006778] transition-colors duration-200"
               >
                 Politique de Confidentialité
               </Link>
