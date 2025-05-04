@@ -54,7 +54,7 @@ export default function Home() {
         <HeroHeader />
 
         <section className="max-w-5xl mx-auto p-4 ">
-          <div className="flex flex-col text-gray-800 max-w-7xl mx-auto">
+          <div className="flex flex-col text-gray-800 max-w-7xl mx-auto py-6">
             <ul className="py-4">
               <li>
                 <h3 className="text-center  text-5xl sm:text-3xl md:text-5xl uppercase font-thin">
@@ -140,72 +140,68 @@ export default function Home() {
         </section>
 
         <section
-  id="apropros"
-  className="w-full mx-auto bg-[#F7F3EC]/50 my-4 p-4"
->
-  <div className="text-gray-800 max-w-5xl mx-auto">
-  
+          id="apropros"
+          className="w-full mx-auto bg-[#F7F3EC]/50 my-4 p-4"
+        >
+          <div className="text-gray-800 max-w-5xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Image de profil */}
+              <div className="flex-shrink-0 basis-full md:basis-1/3 flex justify-center">
+                <img
+                  src="/images/cecile-profil.jpeg"
+                  alt="Photo du thérapeute"
+                  className="w-48 h-48 rounded-full object-cover shadow-md"
+                />
+              </div>
 
-    <div className="flex flex-col md:flex-row items-center gap-8">
-      {/* Image de profil */}
-      <div className="flex-shrink-0 basis-full md:basis-1/3 flex justify-center">
-        <img
-          src="/images/cecile-profil.jpeg"
-          alt="Photo du thérapeute"
-          className="w-48 h-48 rounded-full object-cover shadow-md"
-        />
-      </div>
+              {/* Texte */}
+              <div className="text-sm font-light leading-6 text-justify space-y-4  py-6 basis-full md:basis-2/3">
+                <h5 className="uppercase text-2xl font-thin text-[#009992] mb-6 ">
+                  à propos
+                </h5>
+                <p>
+                  Bonjour et bienvenue, Je m’appelle Cécile, amoureuse de ma
+                  région et installée à Saint-Nicolas-de-Véroce, au cœur des
+                  montagnes qui inspirent mes pratiques.
+                </p>
+                <p>
+                  Guidée par une profonde curiosité et riche de plusieurs
+                  expériences professionnelles, j’ai trouvé ma vocation :
+                  accompagner chacun vers plus de bien-être et de sérénité.
+                </p>
+                <p>
+                  Certifiée en réflexologie plantaire, palmaire, ventrale et
+                  crânienne, ainsi qu’en shiatsu assis, je vous propose des
+                  séances personnalisées pour soulager le stress, les tensions
+                  et la fatigue. À l’image du colibri, je crois que chaque geste
+                  compte pour ramener plus d'équilibre dans votre quotidien.
+                </p>
+                <p>
+                  Formée au Centre Réflexo Naturel de La Roche-sur-Foron et
+                  forte de cinq années d’expérience comme assistante de vie, je
+                  suis particulièrement attentive aux besoins des personnes
+                  âgées et de leurs proches.
+                </p>
+                <p>
+                  J'interviens à domicile, en entreprise dans le cadre du
+                  bien-être au travail, en EHPAD et en résidences seniors,
+                  auprès des résidents comme du personnel.
+                </p>
+                <p>
+                  À partir de septembre 2025, je vous accueillerai également en
+                  cabinet. Je me déplace dans tout le Val Montjoie, le Val
+                  d’Arly, le Pays du Mont-Blanc et la Vallée de l’Arve.
+                </p>
+                <p>
+                  Offrez-vous un moment de détente… ou faites-en cadeau à ceux
+                  que vous aimez ! Contactez-moi pour réserver votre séance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      {/* Texte */}
-      <div className="text-sm font-light leading-6 text-justify space-y-3 basis-full md:basis-2/3">
-      <h5 className="uppercase text-2xl font-thin text-[#009992] mb-6 ">
-      à propos
-    </h5>
-        <p>
-          Bonjour et bienvenue, Je m’appelle Cécile, amoureuse de ma région
-          et installée à Saint-Nicolas-de-Véroce, au cœur des montagnes qui
-          inspirent mes pratiques.
-        </p>
-        <p>
-          Guidée par une profonde curiosité et riche de plusieurs
-          expériences professionnelles, j’ai trouvé ma vocation :
-          accompagner chacun vers plus de bien-être et de sérénité.
-        </p>
-        <p>
-          Certifiée en réflexologie plantaire, palmaire, ventrale et
-          crânienne, ainsi qu’en shiatsu assis, je vous propose des séances
-          personnalisées pour soulager le stress, les tensions et la
-          fatigue. À l’image du colibri, je crois que chaque geste compte
-          pour ramener plus d'équilibre dans votre quotidien.
-        </p>
-        <p>
-          Formée au Centre Réflexo Naturel de La Roche-sur-Foron et forte de
-          cinq années d’expérience comme assistante de vie, je suis
-          particulièrement attentive aux besoins des personnes âgées et de
-          leurs proches.
-        </p>
-        <p>
-          J'interviens à domicile, en entreprise dans le cadre du bien-être
-          au travail, en EHPAD et en résidences seniors, auprès des
-          résidents comme du personnel.
-        </p>
-        <p>
-          À partir de septembre 2025, je vous accueillerai également en
-          cabinet. Je me déplace dans tout le Val Montjoie, le Val d’Arly,
-          le Pays du Mont-Blanc et la Vallée de l’Arve.
-        </p>
-        <p>
-          Offrez-vous un moment de détente… ou faites-en cadeau à ceux que
-          vous aimez ! Contactez-moi pour réserver votre séance.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-        <section id="rdv" className="w-full mx-auto my-4 p-4   ">
+        {/* <section id="rdv" className="w-full mx-auto my-4 p-4   ">
           <div className="text-gray-800 max-w-5xl mx-auto">
             <h5 className="uppercase text-2xl  font-thin mb-4 text-[#009992] ">
               Prendre RDV
@@ -216,9 +212,9 @@ export default function Home() {
               inspirent mes pratiques.
             </p>
           </div>
-        </section>
+        </section> */}
 
-        <section id="contact" className="w-full mx-auto my-4 p-4">
+        <section id="contact" className="w-full mx-auto ">
           <ContactForm />
         </section>
       </div>
