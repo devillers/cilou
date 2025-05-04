@@ -1,7 +1,11 @@
+//app/blog/page.js
+
+
 import HeroHeader from "../components/HeroHeader";
 
 export default async function BlogList() {
-  const res = await fetch("http://localhost:8888/pause_reflexo/wp-json/wp/v2/blog");
+    const res = await fetch(`${process.env.NEXT_PUBLIC_WORDPRESS_API}/wp-json/wp/v2/blog`);
+
   const posts = await res.json();
 
   return (

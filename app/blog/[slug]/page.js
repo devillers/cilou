@@ -1,11 +1,12 @@
-import { notFound } from "next/navigation";
+//app/blog/[slug]/page.js
 
 export default async function BlogPost({ params }) {
   const { slug } = params;
 
-  const res = await fetch(`http://localhost:8888/pause_reflexo/wp-json/wp/v2/blog?slug=${slug}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_WORDPRESS_API}/wp-json/wp/v2/blog?slug=${slug}`, {
     cache: "no-store",
   });
+  
 
   const posts = await res.json();
 
