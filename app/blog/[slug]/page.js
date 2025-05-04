@@ -1,20 +1,30 @@
-//app/blog/[slug]/page.js
+'use client';
 
-export default async function BlogPost({ params }) {
-  const { slug } = params;
+import { useEffect, useState } from 'react';
+import { useParams, notFound } from 'next/navigation';
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_WORDPRESS_API}/wp-json/wp/v2/blog?slug=${slug}`, {
-    cache: "no-store",
-  });
-  
+export default function BlogPost() {
+  const { slug } = useParams();
+  const [post, setPost] = useState(null);
+  const [error, setError] = useState(false);
 
-  const posts = await res.json();
+  useEffect(() => {
+    if (!slug) return;
 
-  if (!posts || posts.length === 0) {
-    notFound();
-  }
+    fetch(`http://localhost:8888/pause_reflexo/wp-json/wp/v2/blog?slug=${slug}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data || data.length === 0) {
+          setError(true);
+        } else {
+          setPost(data[0]);
+        }
+      })
+      .catch(() => setError(true));
+  }, [slug]);
 
-  const post = posts[0];
+  if (error) return <div className="p-6">Article introuvable.</div>;
+  if (!post) return <div className="p-6">Chargement…</div>;
 
   return (
     <main className="p-6 max-w-3xl mx-auto">
@@ -28,17 +38,4 @@ export default async function BlogPost({ params }) {
       />
     </main>
   );
-}
-
-export async function generateMetadata({ params }) {
-  const res = await fetch(`http://localhost:8888/pause_reflexo/wp-json/wp/v2/blog?slug=${params.slug}`);
-  const posts = await res.json();
-
-  if (!posts || posts.length === 0) return { title: "Article introuvable" };
-
-  const post = posts[0];
-  return {
-    title: post.title.rendered,
-    description: post.excerpt?.rendered.replace(/<[^>]+>/g, "").slice(0, 150),
-  };
 }

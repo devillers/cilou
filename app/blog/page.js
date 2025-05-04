@@ -1,12 +1,26 @@
 //app/blog/page.js
 
+"use client";
 
 import HeroHeader from "../components/HeroHeader";
+import { useEffect, useState } from 'react';
 
-export default async function BlogList() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_WORDPRESS_API}/wp-json/wp/v2/blog`);
+// export default async function BlogList() {
+//   const res = await fetch(
+//     `${process.env.NEXT_PUBLIC_WORDPRESS_API}/wp-json/wp/v2/blog`
+//   );
+//   const posts = await res.json();
 
-  const posts = await res.json();
+
+export default function BlogListClient() {
+    const [posts, setPosts] = useState([]);
+  
+    useEffect(() => {
+      fetch('http://localhost:8888/pause_reflexo/wp-json/wp/v2/blog')
+        .then((res) => res.json())
+        .then(setPosts)
+        .catch(console.error);
+    }, []);
 
   return (
     <div className="relative">
@@ -44,7 +58,9 @@ export default async function BlogList() {
               </a>
               <div
                 className="prose mt-2 text-sm text-gray-700"
-                dangerouslySetInnerHTML={{ __html: post.excerpt?.rendered || '' }}
+                dangerouslySetInnerHTML={{
+                  __html: post.excerpt?.rendered || "",
+                }}
               />
             </article>
           ))}
