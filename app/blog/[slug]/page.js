@@ -1,41 +1,101 @@
-'use client';
+//app/blog/[slug]/page.js
 
-import { useEffect, useState } from 'react';
-import { useParams, notFound } from 'next/navigation';
+import { getMetadataForPage } from '../../lib/metadata';
+import { notFound } from 'next/navigation';
+import Breadcrumb from "../../components/BreadCrumb";
 
-export default function BlogPost() {
-  const { slug } = useParams();
-  const [post, setPost] = useState(null);
-  const [error, setError] = useState(false);
+export async function generateMetadata({ params }) {
+  const { slug } = await Promise.resolve(params);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/blog?slug=${slug}&_embed`
+  );
+  const posts = await res.json();
+  const post = posts[0];
 
-  useEffect(() => {
-    if (!slug) return;
+  if (!post) {
+    return getMetadataForPage({
+      title: 'Article introuvable',
+      description: 'Cet article n’existe pas ou a été supprimé.',
+    });
+  }
 
-    fetch(`http://localhost:8888/pause_reflexo/wp-json/wp/v2/blog?slug=${slug}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (!data || data.length === 0) {
-          setError(true);
-        } else {
-          setPost(data[0]);
-        }
-      })
-      .catch(() => setError(true));
-  }, [slug]);
+  const image = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
 
-  if (error) return <div className="p-6">Article introuvable.</div>;
-  if (!post) return <div className="p-6">Chargement…</div>;
+  return getMetadataForPage({
+    title: `${post.title.rendered} | Blog Pause Reflexo`,
+    description: post.excerpt?.rendered.replace(/(<([^>]+)>)/gi, '') ?? 'Découvrez nos conseils experts.',
+    keywords: [post.title.rendered, 'Shiatsu assis', 'Reflexologie', 'haute savoie'],
+    openGraph: {
+      images: image ? [{ url: image }] : [],
+    },
+  });
+}
+
+async function getPost(slug) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/blog?slug=${slug}&_embed`,
+    { next: { revalidate: 60 } }
+  );
+
+  if (!res.ok) return null;
+
+  const posts = await res.json();
+  return posts?.[0];
+}
+
+export default async function PostPage({ params }) {
+  const { slug } = await Promise.resolve(params);
+  const post = await getPost(slug);
+
+  if (!post || !post.content?.rendered) return notFound();
+  const category = post._embedded?.["wp:term"]?.[0]?.[0];
+  const imageUrl = post?._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
 
   return (
-    <main className="p-6 max-w-3xl mx-auto">
+    <>
+    <section className="relative">
+  <div
+    className="relative z-10 mx-auto justify-center flex flex-col min-h-[540px] p-6 bg-cover bg-center"
+    style={{
+      backgroundImage: `url(${imageUrl || '/images/404.webp'})`,
+    }}
+  >
+    <div className="max-w-[660px] z-20 text-white">
       <h1
-        className="text-3xl font-bold mb-4"
+        className="text-5xl md:text-7xl uppercase font-bold"
         dangerouslySetInnerHTML={{ __html: post.title.rendered }}
       />
-      <div
-        className="prose"
-        dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-      />
-    </main>
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-black/60 z-10" />
+  </div>
+</section>
+
+      <div className="max-w-4xl mx-auto p-6">
+        <Breadcrumb
+          items={[
+            { label: "Accueil", href: "/blog" },
+            { label: "Blog", href: "/blog" },
+            category ? { label: category.name, href: `/blog/categorie/${category.slug}` } : null,
+            { label: post.title.rendered },
+          ].filter(Boolean)}
+        />
+
+        {/* {imageUrl && (
+          <div className="mb-6 rounded-xl overflow-hidden">
+            <img src={imageUrl} alt={post.title.rendered} className="w-full object-cover" />
+          </div>
+        )}
+
+        <h1
+          className="text-4xl font-bold mb-6"
+          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+        /> */}
+
+        <article
+          className="prose max-w-none text-[14px] text-justify"
+          dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+        />
+      </div>
+    </>
   );
 }

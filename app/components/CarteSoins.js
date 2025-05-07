@@ -1,9 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function ReflexoPalmaireCard() {
+  const [soin, setSoin] = useState(null);
   const [liked, setLiked] = useState(false);
+
+  useEffect(() => {
+    fetch("http://localhost:8888/pause_reflexo/wp-json/wp/v2/reflexo?_embed&per_page=1")
+      .then((res) => res.json())
+      .then((data) => {
+        setSoin(data[0]);
+      })
+      .catch(console.error);
+  }, []);
+
+  if (!soin) return null;
+
+  const image =
+    soin._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/placeholder.jpg";
+  const categorie = soin.categorie_soin?.[0]?.name || "non catégorisé";
+  const temps = soin.temps_du_soin || "durée inconnue";
 
   return (
     <div className="bg-white rounded-3xl shadow w-full max-w-[240px] aspect-[4/4] mx-auto flex flex-col items-center justify-start text-center pt-6 relative">
@@ -26,23 +43,27 @@ export default function ReflexoPalmaireCard() {
 
       {/* Image */}
       <img
-        src="/hand.png"
-        alt="Réflexologie palmaire"
+        src={image}
+        alt={soin.title.rendered}
         className="w-30 h-30 object-cover rounded-full mb-3 border-4 border-white shadow-sm"
       />
 
       {/* Title */}
       <h3 className="text-md font-semibold leading-tight mb-1 uppercase text-gray-800">
-        Réflexologie <span className="text-[12px] text-[#006878]">40 mn</span>
+        {soin.title.rendered}{" "}
+        <span className="text-[12px] text-[#006878]">{temps} mn</span>
       </h3>
 
       {/* Description */}
       <p className="text-sm font-light text-gray-500 px-4 mb-2">
-        Séance de <span className="text-pink-500 font-semibold uppercase text-[12px]">palmaire</span>
+        Séance de{" "}
+        <span className="text-pink-500 font-semibold uppercase text-[12px]">
+          {categorie}
+        </span>
       </p>
 
-      {/* Price */}
-      <span className="text-[#006878] font-bold text-lg mb-4">40€</span>
+      {/* Price (si tu ajoutes un champ personnalisé "prix" ensuite) */}
+      {/* <span className="text-[#006878] font-bold text-lg mb-4">40€</span> */}
     </div>
   );
 }
